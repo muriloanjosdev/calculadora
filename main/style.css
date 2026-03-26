@@ -1,58 +1,80 @@
 .calc {
 
-    background-color: #E6D5B8;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    border-radius: 8px;
-    border: 4px solid #C4B598;
+  background-color: #E6D5B8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 8px;
+  border: 4px solid #C4B598;
+  font-family: 'Share Tech Mono', monospace;
+  box-shadow:
+    inset 0 1px 0 #EDE3CC,
+    inset -2px 0 0 #B8AA90,
+    inset 0 -3px 0 #9E9078,
+    4px 6px 0 #8A7D68,
+    6px 8px 0 #72675A;
 }
 
 .line {
 
-    display: flex;
-    gap: 5px;
-    margin-bottom: 5px;
-    
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+  
 }
 
 .screen {
+  background: #7A8C5A;
+  border-radius: 2px;
+  height: 44px;
+  font-family: 'VT323', monospace;
+  font-size: 32px;
+  color: #2A3018;
+  text-align: right;
+  padding: 0px 8px;
+  margin: 4px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: none;
+  box-shadow:
+    inset 0 2px 4px rgba(0,0,0,0.4),
+    inset 0 0 0 1px #5A6840;
+  text-shadow: 0 0 4px rgba(42, 48, 24, 0.5);
+}
 
-    width: 210px;
-    height: 40px;
-    background-color: #879172;
-    color: #1A1A1A;
-    border-radius: 8px;
-    font-family: 'VT323', monospace;
-    font-size: 20px;
-    letter-spacing: 0.5px;
-    text-align: right;
-    padding: 5px;
-
+.screen-border {
+  background: #3A3530;
+  border-radius: 8px;
+  padding: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+  margin-bottom: 14px;
+  box-shadow:
+    inset 0 3px 6px #1A1510,
+    inset 0 0 0 1px #1A1510,
+    0 2px 0 #5A5248;
 }
 
 button {
 
-    width: 54px;
-    height: 42px;
-    border-radius: 3px;
-    border: none;
-    cursor: pointer;
-    font-family: 'VT323', monospace;
-    font-size: 20px;
-    letter-spacing: 0.5px;
-    position: relative;
-    transition: transform 0.06s, box-shadow 0.06s;
-    background: #C8BA9E;
-    color: #2A2218;
-    box-shadow:
-        inset 0 1px 0 #DDD0B4,
-        0 3px 0 #7A6E58,
-        0 4px 0 #5A5040;
-    
-
+  width: 54px;
+  height: 42px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: transform 0.06s, box-shadow 0.06s;
+  background: #C8BA9E;
+  color: #2A2218;
+  box-shadow:
+      inset 0 1px 0 #f4ead4,
+      0 3px 0 #7A6E58,
+      0 4px 0 #5A5040;
 }
 
 button:hover {
@@ -62,22 +84,21 @@ button:hover {
 button:active {
   transform: translateY(2px);
   box-shadow:
-    inset 0 1px 0 #DDD0B4,
+    inset 0 1px 0 #f4ead4,
     0 1px 0 #7A6E58;
 }
 
 .zero {
 
-    width: 113px;
-    height: 42px;
-
+  width: 113px;
+  height: 42px;
 }
 
 .equal {
   background: #7A6E58;
   color: #E8DCC4;
   box-shadow:
-    inset 0 1px 0 #9A8E78,
+    inset 0 1px 0 #f4ead4,
     0 3px 0 #3A3028,
     0 4px 0 #1A1810;
 }
@@ -89,17 +110,15 @@ button:active {
 .equal:active {
   transform: translateY(2px);
   box-shadow:
-    inset 0 1px 0 #9A8E78,
+    inset 0 1px 0 #f4ead4,
     0 1px 0 #3A3028;
 }
-
-
 
 .special {
   background: #8C9E7A;
   color: #1A2010;
   box-shadow:
-    inset 0 1px 0 #A8B898,
+    inset 0 1px 0 #cee3ba,
     0 3px 0 #4A5A38,
     0 4px 0 #2A3820;
 }
@@ -111,7 +130,7 @@ button:active {
 .special:active {
   transform: translateY(2px);
   box-shadow:
-    inset 0 1px 0 #A8B898,
+    inset 0 1px 0 #cee3ba,
     0 1px 0 #4A5A38;
 }
 
@@ -119,7 +138,7 @@ button:active {
   background: #9A5A48;
   color: #F0D8CC;
   box-shadow:
-    inset 0 1px 0 #B87060,
+    inset 0 1px 0 #efcdc5,
     0 3px 0 #5A2818,
     0 4px 0 #3A1808;
 }
@@ -131,6 +150,23 @@ button:active {
 #ce:active {
   transform: translateY(2px);
   box-shadow:
-    inset 0 1px 0 #B87060,
+    inset 0 1px 0 #efcdc5,
     0 1px 0 #5A2818;
+}
+
+.vent {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #BEB09A;
+}
+
+.vent span {
+  width: 16px;
+  height: 3px;
+  background: #B4A68C;
+  border-radius: 1px;
+  box-shadow: inset 0 1px 0 #C8BA9E, 0 1px 0 #9A8E78;
 }
