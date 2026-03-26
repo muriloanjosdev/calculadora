@@ -9,7 +9,7 @@ function appendNumber(value) {
 
 function appendOperator(operator) {
     if (currentInput === "" && operator !== ".") return;
-
+    if (currentInput.toString().length >= 16) return;
     const lastChar = currentInput.toString().slice(-1);
     if (["+", "-", "*", "/", "%", "."].includes(lastChar)) {
         currentInput = currentInput.toString().slice(0, -1);
