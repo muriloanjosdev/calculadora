@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +12,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="calc">
         <div class="screen-border">
             <div class="screen" id="screen"></div>
         </div>
         <div class="line">
-            <button id="ce">CE</button>
+            <button id="ce" onclick="clearEntry()">CE</button>
             <button onclick="clearScreen()">C</button>
-            <button onclick="appendOperator('%')">%</button>
-            <button onclick="appendOperator('/')" class="special" >/</button>
+            <button onclick="appendOperator('%')">mod</button>
+            <button onclick="appendOperator('/')" class="special">/</button>
         </div>
         <div class="line">
             <button onclick="appendNumber('7')">7</button>
@@ -46,11 +48,12 @@
             <button onclick="calculate()" class="equal">=</button>
         </div>
         <div class="vent">
-        <span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
